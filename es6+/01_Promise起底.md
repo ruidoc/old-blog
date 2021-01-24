@@ -1,9 +1,10 @@
 ## 概述
 
 命题角度三条线：
-• 考察 Promise 特性（问答题）
-• 给出一段 Promise 代码，问输出结果
-• 深度考察 Promise 原理（终极版本就是让你手写一个 Promise）
+
+* 考察 Promise 特性（问答题）
+* 给出一段 Promise 代码，问输出结果
+* 深度考察 Promise 原理（终极版本就是让你手写一个 Promise）
 
 ### 一：Promise 特性类问题
 
