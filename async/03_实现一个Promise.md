@@ -17,26 +17,28 @@ resolve, reject，都是函数
 执行 resolve()，状态设置为fulfilled，逻辑走到then中去；
 执行 rejected()，状态设置为rejected，逻辑走到catch中去；
 
-根据这些开始手动实现。
+注意，**状态只能改变一次**，只能由 pending 变成 fulfilled 或 rejected，不可逆。
+
+了解了这些，开始动手。
 
 ## 实现
 
-```js
-class Promise {
+首先实现一个简易版 Promise，涵盖了核心概念。
 
+```js
+class Promise1 {
     constructor(executor) {
         // executor是实例化传过来的函数
 
         // 1. 定义resolve和reject函数，第2部会用到
-        function resolve(value) {
+        var resolve = value => {
             if(this.status!=='pending') return;
-            this.status = 'fulfilled';;
+            this.status = 'fulfilled';
             if(this.thenCallback) {
-                // 
                 this.thenCallback(value)
             }
         };
-        function reject(error) {
+        var reject = error => {
             if(this.status!=='pending') return;
             this.status = 'rejected';
             if(this.errorCallback) {
@@ -44,18 +46,23 @@ class Promise {
             }
         };
         // 2. 调用executor执行函数体内的逻辑。同时，再把定义好的resolve，reject函数传回去，等待函数体内调用。
-        executor(resolve.bind(this), reject.bind(this))
+        try {
+            executor(resolve, reject)
+        } catch(e) {
+            reject(e)
+        }
     }
 
     status = 'pending'
     thenCallback = null
     errorCallback = null
 
-    then(fn) {
-        // 3. 定义then方法时，这里会传来一个函数参数。then方法的作用就是把该函数存起来，等待resolve时调用。
-        // then方法与catch同理。then方法返回实例化对象（this）是为了链式调用
-        this.thenCallback = fn
-        return this
+    then(fn, errFn) {
+        // 将传来的函数暂存，等待resolve或reject调用
+        if(this.status == 'pending') {
+            this.thenCallback = fn;
+            this.errorCallback = errFn || null;
+        }
     }
 
     catch(fn) {
@@ -63,3 +70,70 @@ class Promise {
     }
 }
 ```
+
+使用方法：
+
+```js
+function getAsync(val) {
+    return new Promise1(function (resolve, reject) {
+        setTimeout(() => {
+            resolve(val)
+        }, 1000);
+    })
+}
+getAsync('data').then(val => {
+    console.log(val)
+}).catch(e => {
+    console.log(e)
+})
+```
+
+这个简易版 Promise 已经可以使用了。
+
+但为什么说是简易版？因为还缺少一个核心功能：**链式调用**
+
+### 链式调用
+
+链式调用是这样的：
+
+```js
+getAsync('data').then(val => {
+    console.log(val) // data
+    return getAsync('data2')
+}).then(val => {
+    console.log(val) // data2
+}).catch(e => {
+    console.log(e)
+})
+```
+
+看出来了吗，这里多了两个点：
+
+1. then方法可以连着调用多次（不限次）
+2. then方法内必须return一个值（promise 或 定值），这个值会作为下一个then方法函数体的参数
+
+**先看第一点**。then方法之后能继续调用then，说明then方法返回的是一个Promise（即当前构造函数Promise1）。所以改造then方法。
+
+```js
+then(fn, errFn) {
+    return new Promise1(function (resolve, reject) {
+        // 将传来的函数暂存，等待resolve或reject调用
+        if(this.status == 'pending') {
+            this.thenCallback = fn;
+            this.errorCallback = errFn || null;
+        }
+    })
+}
+```
+
+**再看第二点**。
+
+```js
+var resolve = value => {
+    if(this.status!=='pending') return;
+    this.status = 'fulfilled';
+    this.value = value
+    if(this.thenCallback) {
+        this.then()
+    }
+};
