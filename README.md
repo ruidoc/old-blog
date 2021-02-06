@@ -42,3 +42,7 @@
 ### 思考
 
 - [未来前端在哪里？](thinks/未来前端在哪里.md)
+
+## 有用的博客
+
+[在VSCode中高效编辑Markdown](https://www.thisfaner.com/p/edit-markdown-efficiently-in-vscode/)
