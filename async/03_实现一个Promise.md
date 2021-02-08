@@ -110,7 +110,7 @@ getAsync('data').then(val => {
 看出来了吗，这里多了两个点：
 
 1. then方法可以连着调用多次（不限次）
-2. then方法内必须return一个值（promise 或 定值），这个值会作为下一个then方法函数体的参数
+2. resolve函数必须return一个值（promise 或 定值），这个值会作为下一个resolve函数的参数
 
 **先看第一点**。then方法之后能继续调用then，说明then方法返回的是一个Promise（即当前构造函数Promise1）。所以改造then方法。
 
@@ -126,14 +126,30 @@ then(fn, errFn) {
 }
 ```
 
-**再看第二点**。
+**再看第二点**。resolve函数有返回值，并传给下一个resolve。所以要在resolve函数中获取返回，并且在then中使用。同时改造resolve和then方法。
 
 ```js
 var resolve = value => {
     if(this.status!=='pending') return;
     this.status = 'fulfilled';
     this.value = value
-    if(this.thenCallback) {
-        this.then()
-    }
-};
+    this.then()
+}
+then(fn, errFn) {
+    return new Promise1(function (resolve, reject) {
+        // 将传来的函数暂存，等待resolve或reject调用
+        if(this.status == 'pending') {
+            this.thenCallback = fn;
+            this.errorCallback = errFn || null;
+        }
+        if(this.status == 'fulfilled') {
+            var result = thenCallback()
+            if(result instanceof Promise1) {
+                result.then(resolve, reject)
+            } else {
+                resolve(result)
+            }
+        }
+    })
+}
+```
