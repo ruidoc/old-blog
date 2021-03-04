@@ -33,7 +33,7 @@ webpack4 升级到 webpack5 的指南在 [这里](./webpack5升级.md)
 
 #### 入口(entry)
 
-从哪个文件开始构建，直接写路径字符串。默认值为 `./src`
+从哪个文件开始构建，直接写相对路径字符串。默认值为 `./src`
 
 分为单入口和多入口：
 
@@ -146,9 +146,10 @@ plugins 用于以各种方式自定义 webpack 构建流程，在构建流程中
 2. `commons-chunk-plugin`：提取公共代码
 3. `clean-webpack-plugin`：删除打包文件
 4. `define-plugin`：定义环境变量
-5. `mini-css-extract-plugin`：将css提取为独立文件
+5. `mini-css-extract-plugin`：将 css 提取为独立文件
 6. `ignore-plugin`：忽略部分文件
 
 ### 其他资源
 
 1. 这篇面试总结的很好：[这里](https://www.jianshu.com/p/216ed82a3e49)
+2. webpack 原理和 loader/plugin 实现：[这里](https://juejin.cn/post/6844904146827476999)
