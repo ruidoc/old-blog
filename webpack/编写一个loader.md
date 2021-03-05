@@ -46,7 +46,7 @@ module.exports = function (source) {
 
 其中参数 source 就是文件内容。根据该文件内容，我们进行逻辑改造，改造完成后返回新的文件内容即可。
 
-loader 也可以传递参数，复杂的loader逻辑可以用 `loader-utils` 包去辅助编写。
+loader 也可以传递参数，复杂的 loader 逻辑可以用 `loader-utils` 包去辅助编写。
 
 ```js
 // webpack loader 传参配置
@@ -57,10 +57,10 @@ module.exports = {
         test: /\.js$/,
         use: {
           loader: "sync-loader",
-          options: { 
-            text: 'ruims' 
-          }
-        }
+          options: {
+            text: "ruims",
+          },
+        },
       },
     ],
   },
@@ -71,13 +71,13 @@ loader 中接收参数：
 
 ```js
 // loaders/sync-loader.js
-const loaderUtils = require('loader-utils')
+const loaderUtils = require("loader-utils");
 
 module.exports = function (source) {
-  const options = loaderUtils.getOptions(this)
-  console.log(options)
-  source += options.message
-  this.callback(null, source) // 基本等于 return source;
+  const options = loaderUtils.getOptions(this);
+  console.log(options);
+  source += options.message;
+  this.callback(null, source); // 基本等于 return source;
 };
 ```
 
@@ -87,17 +87,17 @@ module.exports = function (source) {
 
 `this.async()` 是关键，它有两个作用：
 
-1. 告诉webpack这是个异步loader
+1. 告诉 webpack 这是个异步 loader
 2. 返回和同步一样的 `this.callback`
 
 ```js
-const loaderUtils = require('loader-utils')
+const loaderUtils = require("loader-utils");
 module.exports = function (source) {
-    const options = loaderUtils.getOptions(this)
-    const asyncfunc = this.async()
-    setTimeout(() => {
-        source += 'by ruims'
-        asyncfunc(null, source)
-    }, 200)
-}
+  const options = loaderUtils.getOptions(this);
+  const asyncfunc = this.async();
+  setTimeout(() => {
+    source += "by ruims";
+    asyncfunc(null, source);
+  }, 200);
+};
 ```
