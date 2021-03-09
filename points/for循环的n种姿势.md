@@ -42,14 +42,36 @@ forEach 在使用上比用 for 循环精简的多，本质上是一个高阶函�
 for(let key in json)
 ```
 
-一般在循环对象属性的时候使用，遍历出 key
+一般在循环对象属性的时候使用，遍历出 key；循环数组时，遍历出下标。
+
+可以遍历任意一个对象的可枚举属性。
+
+但是问题是，会遍历出其他值：
+
+1. 数组对象本身属性值
+2. 原型上的属性
+
+解决遍历原型属性的问题，可以通过 `hasOwnProperty` 判断：
+
+```js
+for (var i in arr) {
+  if (arr.hasOwnProperty(i)) {
+    console.log(i);
+  }
+}
+```
 
 **4. for...of**
 
 ```js
 for(let value of array)
 ```
-
-一般在循环数组的时候使用，遍历出 value。
+可迭代对象（包括 Array，Map，Set，String，TypedArray，arguments 对象等等）上创建一个迭代循环，遍历出 value，一般在循环数组的时候使用
 
 for...of 是 ES6 新特性，修复 for...in 的不足。
+
+**比较**
+
+for...in 循环不仅遍历数组和对象本身，还会遍历手动添加的其它键，甚至包括原型链上的键。for...of 则不会这样。
+
+for...in 还是 for...of 都不能遍历出 Symbol 类型的值，只能用 `Object.getOwnPropertySymbols()` 单独获取这个数组。
