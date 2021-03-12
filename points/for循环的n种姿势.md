@@ -75,3 +75,4 @@ for...of 是 ES6 新特性，修复 for...in 的不足。
 for...in 循环不仅遍历数组和对象本身，还会遍历手动添加的其它键，甚至包括原型链上的键。for...of 则不会这样。
 
 for...in 还是 for...of 都不能遍历出 Symbol 类型的值，只能用 `Object.getOwnPropertySymbols()` 单独获取这个数组。
+
