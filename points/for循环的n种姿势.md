@@ -66,6 +66,7 @@ for (var i in arr) {
 ```js
 for(let value of array)
 ```
+
 可迭代对象（包括 Array，Map，Set，String，TypedArray，arguments 对象等等）上创建一个迭代循环，遍历出 value，一般在循环数组的时候使用
 
 for...of 是 ES6 新特性，修复 for...in 的不足。
