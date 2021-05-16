@@ -3,6 +3,7 @@ description: '努力做一个总结者和分享者'
 
 dest: 'dist'
 
-themeConfig:
-  sidebar: 
-    - 'docs/around/git'
+# themeConfig:
+#   sidebar: 
+#     - title: 'git指南'
+#       path: '/docs/around/git/index.md'
