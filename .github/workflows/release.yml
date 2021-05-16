@@ -54,5 +54,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: root
           ARGS: -avz --delete
-          SOURCE: dock/.vuepress/dist/*
+          SOURCE: dist/*
           TARGET: /home/book/

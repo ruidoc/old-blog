@@ -1,6 +1,4 @@
 title: '杨成功的网络日志'
 description: '努力做一个总结者和分享者'
-configureWebpack: 
-  resolve:
-    alias: 
-      '/': '/'
+
+dest: 'dist'
