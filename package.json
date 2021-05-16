@@ -1,0 +1,15 @@
+{
+  "name": "js-corepower",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ruidoc/js-corepower.git",
+  "author": "Ruidoc <ruidocgo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "vuepress": "^1.8.2"
+  }
+}
