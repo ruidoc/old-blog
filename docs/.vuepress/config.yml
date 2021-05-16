@@ -2,3 +2,7 @@ title: '杨成功的网络日志'
 description: '努力做一个总结者和分享者'
 
 dest: 'dist'
+
+themeConfig:
+  sidebar: 
+    - 'docs/around/git'
