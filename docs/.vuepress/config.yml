@@ -1,9 +1,29 @@
-title: '杨成功的网络日志'
-description: '努力做一个总结者和分享者'
+title: 杨成功的网络日志
+description: 努力做一个总结者和分享者
 
-dest: 'dist'
+dest: dist
 
-# themeConfig:
-#   sidebar: 
-#     - title: 'git指南'
-#       path: '/docs/around/git/index.md'
+themeConfig:
+  nav:
+    - text: Github
+      link: https://github.com/ruidoc/js-corepower
+  sidebar: 
+    - title: git指南
+      path: /around/git/index
+      collapsable: false
+      children: [
+        /around/git/01-获取仓库,
+        /around/git/02-记录文件更新,
+        /around/git/03-查看提交历史,
+        /around/git/04-撤消操作,
+        /around/git/05-远程仓库,
+        /around/git/06-打标签,
+        /around/git/07-使用别名,
+        /around/git/08-分支简介,
+        /around/git/09-新建与合并分支,
+      ]
+
+configureWebpack:
+  resolve: 
+    alias: 
+      '/assets': '/assets'
