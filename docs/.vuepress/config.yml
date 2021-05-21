@@ -26,4 +26,5 @@ themeConfig:
 configureWebpack:
   resolve: 
     alias: 
+      '@assets': /assets
       
