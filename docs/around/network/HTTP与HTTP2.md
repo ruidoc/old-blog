@@ -85,7 +85,7 @@ Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43;
 
 http 不是一成不变的，它一直在发展进化。截止到 2.0 过程如下：
 
-![8712AA1C-DAAE-4E43-AB90-26ECF3A09908](../../../assets/8712AA1C-DAAE-4E43-AB90-26ECF3A09908.png)
+![8712AA1C-DAAE-4E43-AB90-26ECF3A09908](/assets/8712AA1C-DAAE-4E43-AB90-26ECF3A09908.png)
 
 0.9 版本年代太过久远，这里不讨论。就从 1.0 开始说起：
 
@@ -97,13 +97,13 @@ http 不是一成不变的，它一直在发展进化。截止到 2.0 过程如�
 
 每通信一次，都需要“三步走” —— TCP 连接、HTTP 通信、断开 TCP 连接：
 
-![2BDFD233-2755-44E8-ACEB-A79E74515E1B](../../../assets/2BDFD233-2755-44E8-ACEB-A79E74515E1B.png)
+![2BDFD233-2755-44E8-ACEB-A79E74515E1B](/assets/2BDFD233-2755-44E8-ACEB-A79E74515E1B.png)
 
 当通信频率非常高时，这样每次三步走会很消耗资源。
 
 HTTP1.1 解决了这个问题，效果如图：
 
-![F238716F-8787-41E9-BF62-CA5BDE61243C](../../../assets/F238716F-8787-41E9-BF62-CA5BDE61243C.png)
+![F238716F-8787-41E9-BF62-CA5BDE61243C](/assets/F238716F-8787-41E9-BF62-CA5BDE61243C.png)
 
 这样在一个 TCP 连接里可以进行多次 HTTP 通信的机制，就是 —— **长连接**。
 
