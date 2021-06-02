@@ -4,7 +4,7 @@ Shell 是 linux 下的脚本解析器，英译为壳子，就是 Linux 内核外
 
 上一张操作系统结构图：
 
-![shell结构](/assets/shell结构.png)
+![shell结构](/assets/shell_constract.png)
 
 Shell 和内核组成了 Linux 操作系统，如图中的蓝色部分。用户在 GUI 层（终端或者应用程序界面）执行 Shell 命令，就能通过 Linux 操作硬件资源。
 
