@@ -50,7 +50,7 @@ module.exports = {
       ],
       '/core/': [
         {
-          title: '核心基础',
+          title: '基础',
           collapsable: false,
           children: [
             '数据类型基础',
@@ -64,13 +64,54 @@ module.exports = {
           ]
         },
         {
-          title: '应用操作',
+          title: '扩展',
           collapsable: false,
           children: [
             '数据类型转换',
             '闭包面试真题',
             '词法作用域',
             '原型真题解析',
+          ]
+        },
+        {
+          title: 'ES6',
+          collapsable: false,
+          children: [
+            'es6+/常用操作',
+            'es6+/暂时性死区',
+            'es6+/Object方法集',
+            {
+              title: '异步专题',
+              collapsable: false,
+              children: [
+                'es6+/async/异步与回调',
+                'es6+/async/现代方案',
+                'es6+/async/Promise原理',
+                'es6+/async/手写Promise',
+              ]
+            }
+          ]
+        },
+        {
+          title: 'DOM',
+          collapsable: false,
+          children: [
+            'dom/DOM基础',
+            'dom/DOM事件系统',
+            'dom/防抖与节流',
+          ]
+        },
+        {
+          title: 'CSS',
+          collapsable: false,
+          children: [
+            'css/居中方案',
+            'css/文字处理',
+            'css/响应式布局',
+            'css/BFC',
+            'css/工程化',
+            'css/移动端',
+            'css/Flex布局',
           ]
         }
       ]

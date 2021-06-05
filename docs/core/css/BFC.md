@@ -1,14 +1,14 @@
-## BFC与工程化
+# BFC 揭秘
 
-CSS 高级知识点，就是 BFC。
-
-### BFC
+块格式化上下文（Block Formatting Context）简称 BFC。
 
 BFC 就是一个作用范围。可以把它理解成是一个独立的容器。
 
 不过这个定义比较抽象。理解 BFC 能解决什么问题、能够用于什么场景，更直观。
 
-常常解决以下的布局问题：
+### 业务场景
+
+BFC 常用来解决以下的布局问题：
 
 * 清除浮动 bug；
 * 阻止 margin 发生重叠；
@@ -62,7 +62,7 @@ overflow: hidden;
 
 效果如下：
 
-![F670C641-C752-4F66-9AE0-0D1A58F24A2D](/assets/F670C641-C752-4F66-9AE0-0D1A58F24A2D.png)
+![F670C641-C752-4F66-9AE0-0D1A58F24A2D](../assets/F670C641-C752-4F66-9AE0-0D1A58F24A2D.png)
 
 其实这里出现了两个问题：
 
@@ -123,7 +123,7 @@ overflow: hidden;
 
 效果是这样的：
 
-![F0DFF31B-CD58-4882-907C-50F009C10520](/assets/F0DFF31B-CD58-4882-907C-50F009C10520.png)
+![F0DFF31B-CD58-4882-907C-50F009C10520](../assets/F0DFF31B-CD58-4882-907C-50F009C10520.png)
 
 左侧盒子使用了浮动布局，会脱离文档流，“浮”在普通文档流的上方。
 
@@ -139,57 +139,5 @@ overflow: hidden;
 
 最终效果：
 
-![9C81530A-2542-4DD0-939D-392E13F7ADB6](/assets/9C81530A-2542-4DD0-939D-392E13F7ADB6.png)
+![9C81530A-2542-4DD0-939D-392E13F7ADB6](../assets/9C81530A-2542-4DD0-939D-392E13F7ADB6.png)
 
-### 谈谈你对 CSS 工程化的理解
-
-首先，CSS 工程化是为了解决哪些问题：
-
-1. 宏观设计：如何实现模块化？
-2. 编码优化：如何结构清晰？如何复用类名和通用属性？
-3. 构建：打包效果最优
-4. 可维护性：如何修改时成本最小
-
-从这四个方面结合开发经验思考。至少有三个点：
-
-* 预处理器：Less、 Sass 等；
-* 重要的工程化插件： PostCss；
-* Webpack loader 等；
-
-#### 预处理器：为什么要用预处理器？它的出现是为了解决什么问题？
-
-预处理器于 CSS，就相当于 React，Vue 于 JS。
-
-![DB94C1EF-648E-4F43-90DD-918DE8A0337A](/assets/DB94C1EF-648E-4F43-90DD-918DE8A0337A.png)
-
-预处理器的代表就是 LESS 和 SASS，他们普遍具有这样的特性：
-
-* 嵌套代码的能力
-* 支持定义 css 变量
-* 提供计算函数
-* 允许 extend 和 mixin；
-* 支持循环语句
-* 支持模块化的引用
-
-#### PostCss：PostCss 是如何工作的？我们在什么场景下会使用 PostCss？
-
-CSS 世界的 PostCss，相当于 JS 世界里的 Babel。
-
-作用就是将先进的CSS语法转换为浏览器支持的语法。而且它有强大的插件机制，支持扩展。
-
-高频的使用场景如下：
-
-* 提高 CSS 代码的可读性
-* Autoprefixer 自动增加浏览器前缀
-* 面向未来：编译 CSS next 代码
-
-#### Webpack 能处理 CSS 吗？如何实现？
-
-首先，webpack 是面向 JS 的，它本身只支持打包js。
-
-但是，Webpack 在 loader 的支持下，可以处理 css，image
-
-Webpack 中操作 CSS 需要使用的两个关键的 loader：css-loader 和 style-loader
-
-* css-loader：导入 CSS 模块，对 CSS 代码进行编译处理；
-* style-loader：创建style标签，把 CSS 内容写入标签

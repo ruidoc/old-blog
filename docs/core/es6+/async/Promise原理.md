@@ -1,4 +1,4 @@
-## Promise原理
+# Promise 原理
 
 命题角度三条线：
 

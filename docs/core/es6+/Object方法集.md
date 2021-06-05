@@ -1,4 +1,4 @@
-## Object 方法集
+# Object 方法集
 
 列举一下常用的 Object 方法。
 
