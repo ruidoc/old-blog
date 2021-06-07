@@ -6,7 +6,7 @@ function resolve(dir) {
 
 module.exports = {
   title: '前端砍柴人',
-  description: '努力做一个总结者和分享者',
+  description: '坚持做一个总结者和分享者',
   dest: 'dist',
   themeConfig: {
     nav: [
@@ -17,6 +17,10 @@ module.exports = {
       {
         text: 'Git指南',
         link: '/git/'
+      },
+      {
+        text: 'Flutter',
+        link: '/flutter/'
       },
       {
         text: 'Github',
@@ -97,7 +101,7 @@ module.exports = {
           collapsable: false,
           children: [
             'dom/DOM基础',
-            'dom/DOM事件系统',
+            'dom/DOM事件体系',
             'dom/防抖与节流',
           ]
         },
@@ -114,7 +118,10 @@ module.exports = {
             'css/Flex布局',
           ]
         }
-      ]
+      ],
+      // '/flutter': [
+
+      // ]
     }
   },
   configureWebpack: {
