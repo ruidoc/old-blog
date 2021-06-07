@@ -1,9 +1,9 @@
-## 真正理解 HTTPS
+# 理解 HTTPS
 
 HTTPS 其实是多了一个颁发证书的第三方机构
 
-![7B18DC1F-9B47-4E0A-81D0-C55B9D2F9E66](/assets/7B18DC1F-9B47-4E0A-81D0-C55B9D2F9E66.png)
-
+![7B18DC1F-9B47-4E0A-81D0-C55B9D2F9E66](../image/7B18DC1F-9B47-4E0A-81D0-C55B9D2F9E66.png)
+x
 ### 明文传输
 
 客户端和服务器直接通信，无加密，就叫明文传输。

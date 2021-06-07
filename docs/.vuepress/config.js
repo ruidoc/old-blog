@@ -19,9 +19,13 @@ module.exports = {
         link: '/git/'
       },
       {
-        text: 'Flutter',
-        link: '/flutter/'
+        text: '计算机基础',
+        link: '/computer/'
       },
+      // {
+      //   text: 'Flutter',
+      //   link: '/flutter/'
+      // },
       {
         text: 'Github',
         link: 'https://github.com/ruidoc/blog'
@@ -119,9 +123,28 @@ module.exports = {
           ]
         }
       ],
-      // '/flutter': [
-
-      // ]
+      '/computer/': [
+        {
+          title: '浏览器基础',
+          collapsable: false,
+          children: [
+            'browser/浏览器组成',
+            'browser/渲染引擎原理',
+            'browser/重绘与重排',
+            'browser/SEO优化',
+          ]
+        },
+        {
+          title: '计算机网络',
+          collapsable: false,
+          children: [
+            'network/TCP与UDP',
+            'network/HTTP与HTTP2',
+            'network/HTTPS',
+            'network/跨域方案',
+          ]
+        },
+      ]
     }
   },
   configureWebpack: {
