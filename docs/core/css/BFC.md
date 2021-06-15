@@ -141,3 +141,4 @@ overflow: hidden;
 
 ![9C81530A-2542-4DD0-939D-392E13F7ADB6](../assets/9C81530A-2542-4DD0-939D-392E13F7ADB6.png)
 
+查看源码：[两列浮动布局](https://codesandbox.io/s/liangliefudongbuju-1uxrc?file=/index.html)

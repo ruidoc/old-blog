@@ -34,7 +34,7 @@ Promise 对象是一个代理对象，他的值是不确定的，可能是成功
 
 例子：Promise.all([p1, p2, p3])
 
-返回一个新的 promise 对象，全部执行成功后触发then，任意一个失败触发catch
+执行多个 promise，返回一个新的 promise 对象，全部执行成功后触发then，任意一个失败触发catch
 
 ```javascript
 var p1 = Promise.resolve('1号选手');
@@ -51,7 +51,7 @@ Promise.all([p1, p2, p3]).then(values => {
 
 例子：Promise.race([p1, p2, p3])
 
-返回一个新的 promise 对象，任意一个执行成功或失败后，调用对应的then或catch方法
+执行多个 promise，返回一个新的 promise 对象，任意一个执行成功或失败后，调用对应的then或catch方法
 
 #### Promise.reject
 
@@ -126,5 +126,5 @@ then方法只接受函数为参数，其他值会跳过
 
 ### 三：Promise 底层原理考察
 
-这里就要手写promise了
+终于要手写 promise 了！内容较多，移步下一节。
 

@@ -22,10 +22,10 @@ module.exports = {
         text: '计算机基础',
         link: '/computer/'
       },
-      // {
-      //   text: 'Flutter',
-      //   link: '/flutter/'
-      // },
+      {
+        text: '面经',
+        link: '/interview/'
+      },
       {
         text: 'Github',
         link: 'https://github.com/ruidoc/blog'
@@ -116,6 +116,7 @@ module.exports = {
             'css/居中方案',
             'css/文字处理',
             'css/响应式布局',
+            'css/三栏布局',
             'css/BFC',
             'css/工程化',
             'css/移动端',
@@ -144,6 +145,10 @@ module.exports = {
             'network/跨域方案',
           ]
         },
+      ],
+      '/interview/': [
+        '基础100.md',
+        '框架50.md',
       ]
     }
   },

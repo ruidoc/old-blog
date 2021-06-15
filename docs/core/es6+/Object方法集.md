@@ -96,16 +96,17 @@ Object.defineProperty(obj, 'name', {
 与 Object.defineProperty 一样，只是传参方式不同，还用上面的例子：
 
 ```js
-Object.defineProperties(obj, 'name', {
-    get: function() {
+Object.defineProperties(obj, {
+    name: {
+       get: function() {
         // 使用 obj.name
-    },
-    set: function(val) {
-        // 设置 obj.name
+       },
+       set: function(val) {
+           // 设置 obj.name
+       }
     }
 })
 ```
-
 ### 4. Object.assign
 
 将一个或多个源对象的可枚举属性分配到目标对象，并返回目标对象
