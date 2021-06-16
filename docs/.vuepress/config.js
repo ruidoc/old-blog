@@ -15,16 +15,33 @@ module.exports = {
         link: '/core/'
       },
       {
-        text: 'Git指南',
-        link: '/git/'
-      },
-      {
         text: '计算机基础',
         link: '/computer/'
       },
       {
+        text: '框架',
+        link: '/framwork/'
+      },
+      {
         text: '面经',
         link: '/interview/'
+      },
+      {
+        text: '了解更多',
+        items: [
+          {
+            text: 'Git指南',
+            link: '/git/'
+          },
+          {
+            text: 'TypeScript',
+            link: '/typescript/'
+          },
+          {
+            text: 'Webpack',
+            link: '/webpack/'
+          },
+        ]
       },
       {
         text: 'Github',
@@ -132,6 +149,7 @@ module.exports = {
             'browser/浏览器组成',
             'browser/渲染引擎原理',
             'browser/重绘与重排',
+            'browser/缓存机制',
             'browser/SEO优化',
           ]
         },
@@ -143,6 +161,48 @@ module.exports = {
             'network/HTTP与HTTP2',
             'network/HTTPS',
             'network/跨域方案',
+          ]
+        },
+      ],
+      '/framwork/': [
+        {
+          title: 'React',
+          collapsable: false,
+          children: [
+            'react/生命周期',
+          ]
+        },
+        {
+          title: 'Vue',
+          collapsable: false,
+          children: [
+            'vue/零散知识',
+            'vue/响应式原理',
+            'vue/nextTick原理',
+            'vue/vuex原理',
+          ]
+        },
+      ],
+      '/webpack/': [
+        {
+          title: 'webpack 基础',
+          collapsable: false,
+          children: [
+            '初识webpack',
+            '编写loader',
+            '编写plugin',
+            'webpack5升级',
+          ]
+        },
+      ],
+      '/typescript/': [
+        {
+          title: 'webpack 基础',
+          collapsable: false,
+          children: [
+            '类型基础',
+            '类型高级',
+            '装饰器',
           ]
         },
       ],

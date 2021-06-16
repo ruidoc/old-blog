@@ -1,4 +1,4 @@
-## 初识 webpack
+# 初识 webpack
 
 这一节介绍一下前端大家庭中的重量级成员——**webpack**
 

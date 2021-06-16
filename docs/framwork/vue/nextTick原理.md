@@ -1,4 +1,4 @@
-## nextTick 原理
+# nextTick 原理
 
 nextTick 是 Vue 异步更新策略的核心，同时也涉及到 Event-Loop。
 
