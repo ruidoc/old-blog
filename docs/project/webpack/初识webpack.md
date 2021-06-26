@@ -6,7 +6,7 @@ webpack 是一款打包模块化 JavaScript 的工具，专注构建模块化项
 
 上一张官网截图：
 
-![企业微信20210208-155704@2x](/assets/20210208-155704@2x.png)
+![企业微信20210208-155704@2x](../image/20210208-155704@2x.png)
 
 webpack 可以将任何类型文件打包成 css, js 和图片，供浏览器解析。
 
@@ -24,12 +24,13 @@ webpack4 升级到 webpack5 的指南在 [这里](./webpack5升级.md)
 
 ### 核心概念
 
-4 个核心概念：
+5 个核心概念：
 
 1. 入口(entry)
 2. 输出(output)
-3. loader
+3. 加载器(loader)
 4. 插件(plugins)
+5. 模式(mode)
 
 #### 入口(entry)
 
@@ -88,7 +89,7 @@ filename: "[name].[hash].bundle.js";
 filename: "[chunkhash].bundle.js";
 ```
 
-#### loader
+#### 加载器(loader)
 
 webpack 自身只理解 JavaScrip，loader 让 webpack 能够去处理非 JavaScript 文件。
 
@@ -149,6 +150,15 @@ plugins 用于以各种方式自定义 webpack 构建流程，在构建流程中
 5. `mini-css-extract-plugin`：将 css 提取为独立文件
 6. `ignore-plugin`：忽略部分文件
 
+#### 模式(mode)
+
+可选择模式：
+
+- development：开发环境
+- production：生产环境
+- none
+
+默认值为 production。
 ### 其他资源
 
 1. 这篇面试总结的很好：[这里](https://www.jianshu.com/p/216ed82a3e49)

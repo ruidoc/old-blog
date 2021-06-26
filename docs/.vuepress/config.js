@@ -38,8 +38,8 @@ module.exports = {
             link: '/typescript/'
           },
           {
-            text: 'Webpack',
-            link: '/webpack/'
+            text: '工程化',
+            link: '/project/'
           },
         ]
       },
@@ -183,17 +183,40 @@ module.exports = {
           ]
         },
       ],
-      '/webpack/': [
+      '/project/': [
         {
-          title: 'webpack 基础',
+          title: 'webpack',
           collapsable: false,
           children: [
-            '初识webpack',
-            '编写loader',
-            '编写plugin',
-            'webpack5升级',
+            'webpack/初识webpack',
+            'webpack/编写loader',
+            'webpack/编写plugin',
+            'webpack/webpack5升级',
           ]
         },
+        {
+          title: 'babel',
+          collapsable: false,
+          children: [
+            'babel/babel基础',
+          ]
+        },
+        {
+          title: 'npm',
+          collapsable: false,
+          children: [
+            'npm/开发脚手架',
+            'npm/发布npm包',
+          ]
+        },
+        // {
+        //   title: '从零搭建 webpack 应用',
+        //   collapsable: false,
+        //   children: [
+        //     'practice/初始化项目',
+        //     'practice/开发配置',
+        //   ]
+        // },
       ],
       '/typescript/': [
         {

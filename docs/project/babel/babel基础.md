@@ -1,4 +1,4 @@
-## babel 基础概念
+# babel 基础
 
 Babel 是一个转码器，可以将 ES6 代码转为 ES5 代码。
 
