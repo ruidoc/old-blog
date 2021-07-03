@@ -25,10 +25,11 @@ npm config set registry http://registry.npmjs.org
 - main
 - bin
 - publishConfig
+- files
 
 #### name
 
-name 指包名，必须唯一，也就是在 npm 上面没有的，否则会发布失败（403错误）
+name 指包名，必须唯一，也就是在 npm 上面没有的，否则会发布失败（403 错误）
 
 如果是 scoped 包，包名的规范是 `@[scoped]/[package-name]`，比如这样：
 
@@ -77,3 +78,60 @@ v1.0.0
 
 如果不需要，可以传入 `--no-git-tag-version` 来阻止。
 
+#### main
+
+包的入口，也就是指定引入包时引入哪个文件。
+
+比如，现有 hammer 包的 main 属性如下：
+
+```json
+{
+  "main": "lib/index.js"
+}
+```
+
+那么：
+
+```js
+import hammer from "hammer";
+// 等同于
+import hammer from "node_modules/hammer/lib/index.js";
+```
+
+#### bin
+
+bin 属性上节说了，作用是指定命令的执行文件。
+
+比如，现有 hammer 包的配置如下：
+
+```json
+{
+  "bin": {
+    "hammer": "bin/hammer-cli.js"
+  }
+}
+```
+
+那么：
+
+```sh
+$ hammer -v
+# 等同于
+$ node node_modules/hammer/bin/hammer-cli.js
+```
+
+#### publishConfig
+
+配置发布的仓库地址和权限。
+
+比如，要将代码发布到公司内部的私有仓库，这个配置项就派上用场了。
+
+```json
+{
+  "publishConfig": {
+    "registry": "http://localhost/repository/npm-hosted/",
+    "tag": "beta",
+    "access": "public"
+  }
+}
+```

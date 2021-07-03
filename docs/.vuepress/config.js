@@ -23,8 +23,8 @@ module.exports = {
         link: '/framwork/'
       },
       {
-        text: '面经',
-        link: '/interview/'
+        text: '工程化',
+        link: '/project/'
       },
       {
         text: '了解更多',
@@ -38,8 +38,8 @@ module.exports = {
             link: '/typescript/'
           },
           {
-            text: '工程化',
-            link: '/project/'
+            text: '面经',
+            link: '/interview/'
           },
         ]
       },
@@ -205,8 +205,18 @@ module.exports = {
           title: 'npm',
           collapsable: false,
           children: [
+            'npm/package解析',
             'npm/开发脚手架',
             'npm/发布npm包',
+          ]
+        },
+        {
+          title: 'format',
+          collapsable: false,
+          children: [
+            'standard/vscode格式化',
+            'standard/eslint入门',
+            'standard/eslint规则',
           ]
         },
         // {
