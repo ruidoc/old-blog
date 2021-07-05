@@ -58,13 +58,37 @@ prettier 是最流行的 vscode 代码格式化插件，用于制定团队编码
 {
   "singleQuote": true, // 是否单引号
   "semi": false, // 声明结尾使用分号(默认true)
-  "printWidth": 100, // 每行代码长度（默认80）
+  "printWidth": 100, // 一行的字符数，超过会换行（默认80）
   "tabWidth": 2, // 每个tab相当于多少个空格（默认2）
   "useTabs": true, // 是否使用tab进行缩进（默认false）
   "trailingComma": "all", // 多行使用拖尾逗号（默认none）
   "bracketSpacing": true, // 对象字面量的大括号间使用空格（默认true）
   "jsxBracketSameLine": false, // 多行JSX中的>放置在最后一行的结尾，而不是另起一行（默认false）
   "arrowParens": "avoid" // 只有一个参数的箭头函数的参数是否带圆括号（默认avoid）
+}
+```
+
+vue 中的 template 属性换行规则，主要靠 `printWidth` 属性。
+
+prettier 还可以针对不同后缀的文件设置不同的配置：
+
+```json
+{
+  "semi": false,
+  "overrides": [
+    {
+      "files": "*.test.js",
+      "options": {
+        "semi": true
+      }
+    },
+    {
+      "files": ["*.json"],
+      "options": {
+        "parser": "json-stringify"
+      }
+    }
+  ]
 }
 ```
 
@@ -79,7 +103,7 @@ prettier 是最流行的 vscode 代码格式化插件，用于制定团队编码
 
 ### vue
 
-vue 的格式化，用另一款插件 `vetur`，在 vscode 中搜索安装即可。
+vue 的格式化，默认是用另一款插件 `vetur`，在 vscode 中搜索安装即可。
 
 然后就是配置 vetur：
 
@@ -90,19 +114,24 @@ vue 的格式化，用另一款插件 `vetur`，在 vscode 中搜索安装即可
     "editor.defaultFormatter": "octref.vetur"
   },
   "vetur.format.defaultFormatter.html": "prettyhtml", // vue 中 template 的格式化配置
-  "vetur.format.defaultFormatter.js": "prettier", // vue 中 js 的格式化配置
+  "vetur.format.defaultFormatter.js": "esbenp.prettier-vscode", // vue 中 js 的格式化配置
   "vetur.format.defaultFormatterOptions": {
     "prettyhtml": {
-      "wrap_attributes": "auto" // 属性自动换行
-    },
-    // 同 prettier 配置一致
-    "prettier": {
-      "semi": false,
       "printWidth": 140,
-      "singleQuote": true,
-      "trailingComma": "none",
-      "arrowParens": "avoid"
+      "wrap_attributes": "auto" // 属性自动换行
     }
   }
 }
 ```
+
+**注意：**如果使用 vetur 格式化，可能会和 prettier 有冲突。我的方式是直接使用 prettier 格式化 vue：
+
+```json
+{
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
+```
+
+然后设置默认格式化方式为 prettier，就可以保持统一了。
