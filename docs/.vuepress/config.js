@@ -154,6 +154,16 @@ module.exports = {
           ]
         },
         {
+          title: '计算机组成原理',
+          collapsable: false,
+          children: [
+            'compose/发展史',
+            'compose/冯诺依曼',
+            'compose/翻译与解析',
+            'compose/计算单位',
+          ]
+        },
+        {
           title: '计算机网络',
           collapsable: false,
           children: [
