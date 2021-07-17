@@ -2,11 +2,11 @@
 
 name: 发布构建
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -55,4 +55,4 @@ jobs:
           REMOTE_USER: root
           ARGS: -avz --delete
           SOURCE: dist/*
-          TARGET: /home/book/
+          TARGET: /home/blog/

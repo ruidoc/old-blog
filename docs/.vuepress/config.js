@@ -9,6 +9,7 @@ module.exports = {
   description: '坚持做一个总结者和分享者',
   dest: 'dist',
   themeConfig: {
+    lastUpdated: '更新时间：',
     nav: [
       {
         text: 'JS核心',
@@ -253,13 +254,6 @@ module.exports = {
         '基础100.md',
         '框架50.md',
       ]
-    }
-  },
-  configureWebpack: {
-    resolve: {
-      alias: {
-        '@assets': resolve('../../assets')
-      }
     }
   }
 }

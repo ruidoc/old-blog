@@ -1,9 +1,9 @@
 {
-  "name": "js-corepower",
+  "name": "ruims-blog",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/ruidoc/js-corepower.git",
-  "author": "Ruidoc <ruidocgo@gmail.com>",
+  "repository": "https://github.com/ruidoc/blog.git",
+  "author": "ruims <ruidocgo@gmail.com>",
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev docs",
