@@ -1,4 +1,4 @@
-## ssh 免密登录
+# ssh 免密登录
 
 之前在做持续部署的时候，需要做 ssh 免密登录，记一下以免忘记。
 
@@ -62,5 +62,3 @@ Enter file in which to save the key (/Users/yangrui/.ssh/id_rsa): ./my_rsa
 ```
 
 这样生成了 `my_rsa` 和 `my_rsa.pub`，复制使用就好。
-
-

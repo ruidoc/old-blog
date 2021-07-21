@@ -1,4 +1,4 @@
-## shell 基础
+# shell 基础
 
 Shell 是 linux 下的脚本解析器，英译为壳子，就是 Linux 内核外面包裹的一层外壳。Shell 提供了一系列 Shell 命令，用于用户与内核交互。
 

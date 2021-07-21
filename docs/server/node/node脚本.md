@@ -36,7 +36,7 @@ process.env.NODE_ENV # "development"
 process.env.NODE_ENV = "production"
 ```
 
-## 获取参数
+### 获取参数
 
 在 node 中通过 `process.argv` 来获取传来的参数值，它返回一个数组。
 

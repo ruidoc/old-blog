@@ -39,6 +39,10 @@ module.exports = {
             link: '/typescript/'
           },
           {
+            text: '服务端',
+            link: '/server/'
+          },
+          {
             text: '面经',
             link: '/interview/'
           },
@@ -247,6 +251,30 @@ module.exports = {
             '类型基础',
             '类型高级',
             '装饰器',
+          ]
+        },
+      ],
+      '/server/': [
+        {
+          title: 'shell',
+          collapsable: false,
+          children: [
+            'shell/前端之shell',
+            'shell/shell基础',
+            'shell/权限设置',
+            'shell/ssh免密登录',
+          ]
+        },
+        {
+          title: 'nodejs',
+          collapsable: false,
+          children: [
+            'node/初识node',
+            'node/命令行',
+            'node/node脚本',
+            'node/事件循环',
+            'node/事件触发器',
+            'node/http服务器',
           ]
         },
       ],

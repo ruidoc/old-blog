@@ -1,6 +1,6 @@
-## 前端为什么要学 shell?
+# 前端为什么要学 shell?
 
-Shell 是 操作 Linux 系统的桥梁。Shell 介绍看 [这里](./shell基础.md)。
+Shell 是 操作 Linux 系统的桥梁。
 
 对于前端同学来说，几乎不需要和服务器打交道，为什么要学习 shell 呢？
 
@@ -44,17 +44,11 @@ APP_ENV=staging webpack src/index.js dist/bundle.js
 version=$(date "+%s")_build && webpack src/index.js dist/$version/bundle.js
 ```
 
-除了直接写 shell，当然也可以执行一个脚本文件：
-
-```sh
-node scripts/start.js
-```
-
-在 `scripts/start.js` 这个脚本中自定义 webpack 编译流程。这是 create-react-app 的做法。
+如果你不懂 shell，你会认为这是 webpack 自带的功能，你就不会从 shell 的角度去思考如何解决问题。
 
 ### 服务器部署配置
 
-前端项目打包后要部署到服务器，整个部署流程几乎都要用到 shell。
+前端项目打包后要部署到服务器，整个部署流程几乎都要用到 shell。因为只要涉及到服务器，不懂 shell 命令是走不下去的。
 
 #### 普通部署
 
@@ -69,7 +63,7 @@ rsync -avz ./dist/* root@yourip:/home/project_name
 1. nginx 静态部署
 2. nodejs + pm2 部署
 
-这两步都需要进入服务器操作，当然需要懂 shell 命令。
+这两种方式，就要懂基本 shell 命令和 nginx 和 node 相关操作。
 
 #### 自动部署
 
