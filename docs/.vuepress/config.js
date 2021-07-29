@@ -176,6 +176,7 @@ module.exports = {
             'network/HTTP与HTTP2',
             'network/HTTPS',
             'network/跨域方案',
+            'network/axios全解',
           ]
         },
       ],
@@ -245,12 +246,14 @@ module.exports = {
       ],
       '/typescript/': [
         {
-          title: 'webpack 基础',
+          title: 'TypeScript 基础',
           collapsable: false,
           children: [
             '类型基础',
             '类型高级',
             '装饰器',
+            '声明文件',
+            'tsc',
           ]
         },
       ],
