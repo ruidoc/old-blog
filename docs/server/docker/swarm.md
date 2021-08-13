@@ -16,10 +16,32 @@ Swarm 是 Docker 内置的集群管理和编排工具。
 
 ### 服务和任务
 
-任务 （Task）是 Swarm 中的最小的调度单位，目前来说就是一个单一的容器。
+任务（Task）是 Swarm 中的最小的调度单位，目前来说就是一个单一的容器。
 
 服务 （Services） 是指一组任务的集合。
 
 服务通过 `docker service create` 创建。
 
 ![services-diagram](../image/services-diagram.png)
+
+### 初始化集群
+
+初始化集群，同时会将这台机器设置为管理节点。
+
+```sh
+$ docker swarm init
+```
+
+初始化成功后输出如下：
+
+```
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token [token] [ip:port]
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions
+```
+
+这里可以记下打印的 `token` 和 `ip`，供后续使用。
+
+初始化集群之后，下面就进入服务的操作了。

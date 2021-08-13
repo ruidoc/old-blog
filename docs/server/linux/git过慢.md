@@ -2,7 +2,7 @@
 
 在 CentOS 服务器上执行 git 克隆，拉取，推送时，超级慢，甚至超时，这里记录下解决方案。
 
-首先，特别慢的原因是 `github.global.ssl.fastly.net` 域名被限制了。思路是找到对应 IP，然后加到 hosts 文件中，最后刷新 刷新 DNS 缓存即可。
+首先，特别慢的原因是 `github.global.ssl.fastly.net` 域名被限制了。思路是找到对应 IP，然后加到 hosts 文件中，最后刷新 DNS 缓存即可。
 
 ### 查找IP
 

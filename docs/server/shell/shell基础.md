@@ -29,5 +29,17 @@ Shell 也是有分类的，必须了解的三种 Shell：
 
 **Zsh**
 
-全局配置：`/etc/profile`，`/etc/bashrc`
-个人配置：`~/.bash_profile`，`~/.bashrc`
+全局配置：`/etc/zshrc`
+个人配置：`~/.zshrc`
+
+查看当前 shell：
+
+```sh
+$ echo $SHELL;
+```
+
+切换 shell：
+
+```sh
+$ chsh -s /bin/zsh
+```
