@@ -39,3 +39,40 @@ $ sudo chmod +x /usr/local/bin/docker-compose
 ```sh
 $ sudo pip install -U docker-compose
 ```
+
+### 基本使用
+
+执行 `docker-compose` 命令的目录，需要有 `docker-compose.yml` 或者 `compose.yml` 配置文件。
+
+首先是构建命令：
+
+```sh
+$ docker-compose up
+```
+
+查看运行的服务：
+
+```sh
+$ docker-compose ps
+```
+
+停止运行的服务：
+
+```sh
+$ docker-compose stop
+```
+
+删除已经停止的服务：
+
+```sh
+$ docker-compose rm
+```
+
+如果没有上述说的配置文件，也可以指定其他的 `.yml` 配置文件，如：
+
+
+```sh
+$ docker-compose -f mycustom.yml up -d
+```
+
+这行命令 `-f` 参数表示指定一个 `.yml` 配置文件，`-d` 参数表示后台运行。
