@@ -45,7 +45,7 @@ module.exports = {
           {
             text: '面经',
             link: '/interview/'
-          },
+          }
         ]
       },
       {
@@ -67,15 +67,13 @@ module.exports = {
             '06-tag',
             '07-alias',
             '08-分支简介',
-            '09-新建与合并分支',
+            '09-新建与合并分支'
           ]
         },
         {
           title: '应用指南',
           collapsable: false,
-          children: [
-            '其他杂项',
-          ]
+          children: ['其他杂项']
         }
       ],
       '/core/': [
@@ -90,7 +88,7 @@ module.exports = {
             '事件循环',
             '面向对象',
             'this指向',
-            '执行上下文',
+            '执行上下文'
           ]
         },
         {
@@ -100,7 +98,7 @@ module.exports = {
             '数据类型转换',
             '闭包面试真题',
             '词法作用域',
-            '原型真题解析',
+            '原型真题解析'
           ]
         },
         {
@@ -117,7 +115,7 @@ module.exports = {
                 'es6+/async/异步与回调',
                 'es6+/async/现代方案',
                 'es6+/async/Promise原理',
-                'es6+/async/手写Promise',
+                'es6+/async/手写Promise'
               ]
             }
           ]
@@ -125,11 +123,7 @@ module.exports = {
         {
           title: 'DOM',
           collapsable: false,
-          children: [
-            'dom/DOM基础',
-            'dom/DOM事件体系',
-            'dom/防抖与节流',
-          ]
+          children: ['dom/DOM基础', 'dom/DOM事件体系', 'dom/防抖与节流']
         },
         {
           title: 'CSS',
@@ -142,7 +136,7 @@ module.exports = {
             'css/BFC',
             'css/工程化',
             'css/移动端',
-            'css/Flex布局',
+            'css/Flex布局'
           ]
         }
       ],
@@ -155,7 +149,7 @@ module.exports = {
             'browser/渲染引擎原理',
             'browser/重绘与重排',
             'browser/缓存机制',
-            'browser/SEO优化',
+            'browser/SEO优化'
           ]
         },
         {
@@ -165,7 +159,7 @@ module.exports = {
             'compose/发展史',
             'compose/冯诺依曼',
             'compose/翻译与解析',
-            'compose/计算单位',
+            'compose/计算单位'
           ]
         },
         {
@@ -176,17 +170,15 @@ module.exports = {
             'network/HTTP与HTTP2',
             'network/HTTPS',
             'network/跨域方案',
-            'network/axios全解',
+            'network/axios全解'
           ]
-        },
+        }
       ],
       '/framwork/': [
         {
           title: 'React',
           collapsable: false,
-          children: [
-            'react/生命周期',
-          ]
+          children: ['react/生命周期']
         },
         {
           title: 'Vue',
@@ -195,9 +187,9 @@ module.exports = {
             'vue/零散知识',
             'vue/响应式原理',
             'vue/nextTick原理',
-            'vue/vuex原理',
+            'vue/vuex原理'
           ]
-        },
+        }
       ],
       '/project/': [
         {
@@ -207,24 +199,18 @@ module.exports = {
             'webpack/初识webpack',
             'webpack/编写loader',
             'webpack/编写plugin',
-            'webpack/webpack5升级',
+            'webpack/webpack5升级'
           ]
         },
         {
           title: 'babel',
           collapsable: false,
-          children: [
-            'babel/babel基础',
-          ]
+          children: ['babel/babel基础']
         },
         {
           title: 'npm',
           collapsable: false,
-          children: [
-            'npm/package解析',
-            'npm/开发脚手架',
-            'npm/发布npm包',
-          ]
+          children: ['npm/package解析', 'npm/开发脚手架', 'npm/发布npm包']
         },
         {
           title: 'format',
@@ -232,9 +218,9 @@ module.exports = {
           children: [
             'standard/vscode格式化',
             'standard/eslint入门',
-            'standard/eslint规则',
+            'standard/eslint规则'
           ]
-        },
+        }
         // {
         //   title: '从零搭建 webpack 应用',
         //   collapsable: false,
@@ -248,14 +234,8 @@ module.exports = {
         {
           title: 'TypeScript 基础',
           collapsable: false,
-          children: [
-            '类型基础',
-            '类型高级',
-            '装饰器',
-            '声明文件',
-            'tsc',
-          ]
-        },
+          children: ['类型基础', '类型高级', '装饰器', '声明文件', 'tsc']
+        }
       ],
       '/server/': [
         {
@@ -265,7 +245,7 @@ module.exports = {
             'shell/前端之shell',
             'shell/shell基础',
             'shell/权限设置',
-            'shell/ssh免密登录',
+            'shell/ssh免密登录'
           ]
         },
         {
@@ -277,15 +257,33 @@ module.exports = {
             'node/node脚本',
             'node/事件循环',
             'node/事件触发器',
-            'node/http服务器',
+            'node/http服务器'
           ]
         },
+        {
+          title: 'docker',
+          collapsable: false,
+          children: [
+            'docker/container',
+            'docker/swarm',
+            'docker/service',
+            'docker/registry',
+            'docker/verdaccio',
+            'docker/compose',
+            'docker/问题记录'
+          ]
+        },
+        {
+          title: 'nginx',
+          collapsable: false,
+          children: [
+            'nginx/location配置',
+            'nginx/history路由',
+            'nginx/docker相关'
+          ]
+        }
       ],
-      '/interview/': [
-        '基础100.md',
-        '框架50.md',
-      ]
+      '/interview/': ['基础100.md', '框架50.md']
     }
   }
 }
-

@@ -1,4 +1,4 @@
-# service 服务
+# 服务（service）
 
 上节集群说过，任务（task）是一个容器，服务（service）则是一组容器。
 

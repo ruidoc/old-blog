@@ -1,4 +1,4 @@
-# verdaccio 安装
+# verdaccio
 
 verdaccio 是一款自部署的 npm 私有仓库工具。
 

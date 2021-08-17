@@ -1,4 +1,4 @@
-## location 配置
+# location 配置
 
 location 是对服务器路由解析规则的配置。
 
