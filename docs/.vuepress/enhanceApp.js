@@ -75,7 +75,9 @@ export default ({
 }) => {
   try {
     // 生成静态页时在node中执行，没有document对象
-    document && integrateGitalk(router)
+    if (document) {
+      integrateGitalk(router)
+    }
   } catch (e) {
     console.error(e.message)
   }

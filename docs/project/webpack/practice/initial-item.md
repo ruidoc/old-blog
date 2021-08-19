@@ -45,7 +45,7 @@ npm install html-webpack-plugin --save-dev
 
 **.gitignore**
 
-```text
+```
 node_modules
 dist
 package-lock.json
