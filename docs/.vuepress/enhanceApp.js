@@ -58,6 +58,7 @@ function integrateGitalk(router) {
       id: location.origin + path,
       owner: 'ruidoc', // 必须是你自己的github账号
       repo: 'blog', // 上一个准备的github仓库
+      admin: ['ruidoc'],
       distractionFreeMode: false,
       clientID: '335aa091f2446d1a5cb4', // 第一步注册 OAuth application 后获取到的 Client ID
       clientSecret: '6f397b78a7f76cc6dfb727b73e860a2553423ae3' // 第一步注册 OAuth application 后获取到的 Clien Secret
