@@ -42,7 +42,7 @@ yarn run eject # 操作不可逆
 
 - assets：资源目录
 - components：公共组件目录
-- models：状态管理目录
+- stores：状态管理目录
 - pages：页面组件目录
 - router：路由相关目录
 - styles：样式目录
@@ -161,3 +161,5 @@ import "~antd/dist/antd.less";
 ```css
 @import "~antd/dist/antd.less";
 ```
+
+好了，配置完成，开始愉快的写代码吧！

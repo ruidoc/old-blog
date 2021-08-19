@@ -109,3 +109,35 @@ $ git push origin --delete <tagname>
 
 检出标签和检出分支的作用基本一致。
 
+#### git version
+
+打标签更规范的方式，是使用 git version 命令。
+
+第一次发包必须指定版本号。后续每一次更新包时，版本号也必须更新。
+
+版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)的规则，包括 3 个部分：
+
+- major：不兼容的 API 修改
+- minor：向下兼容的功能性新增
+- patch：向下兼容的问题修正
+
+这 3 部分组成字符 `major.minor.patch`，如 `0.1.1`，这就是符合规范的版本号。
+
+除了手动修改版本号，也可以通过 `npm version` 命令管理版本。
+
+```sh
+// 假设当前版本号 v0.1.1
+
+$ npm version patch
+v0.1.2
+
+$ npm version minor
+v0.2.0
+
+$ npm version major
+v1.0.0
+```
+
+`npm version` 除了快捷管理版本外，还会在 git 中生成一个 `commit` 和 `tag`，便于查找和管理。
+
+如果不需要，可以传入 `--no-git-tag-version` 来阻止。

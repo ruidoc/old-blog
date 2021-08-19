@@ -13,15 +13,15 @@ function tryRun(fn, times = 3) {
   }
 }
 
-function integrateGitment(router) {
-  const linkGitment = document.createElement('link')
-  linkGitment.href = 'https://imsun.github.io/gitment/style/default.css'
-  linkGitment.rel = 'stylesheet'
-  const scriptGitment = document.createElement('script')
-  scriptGitment.src = 'https://imsun.github.io/gitment/dist/gitment.browser.js'
+function integrateGitalk(router) {
+  const linkDom = document.createElement('link')
+  linkDom.href = 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css'
+  linkDom.rel = 'stylesheet'
+  const scriptDom = document.createElement('script')
+  scriptDom.src = 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js'
 
-  document.body.appendChild(linkGitment)
-  document.body.appendChild(scriptGitment)
+  document.body.appendChild(linkDom)
+  document.body.appendChild(scriptDom)
 
   router.afterEach((to, from) => {
     // 页面滚动，hash值变化，也会触发afterEach钩子，避免重新渲染
@@ -30,7 +30,7 @@ function integrateGitment(router) {
     // 已被初始化则根据页面重新渲染 评论区
     tryRun(next => {
       const $page = document.querySelector('.page')
-      if ($page && window.Gitment) {
+      if ($page && window.Gitalk) {
         // gitment 取document.title作为issue的标题
         // 如果不setTimeout取到是上一篇文档的标题
         setTimeout(() => {
@@ -50,22 +50,19 @@ function integrateGitment(router) {
     const commentsContainer = document.createElement('div')
     commentsContainer.id = 'comments-container'
     commentsContainer.classList.add('content')
-    commentsContainer.style = 'padding: 0 30px;'
+    commentsContainer.style = 'width: 760px; margin: 20px auto;'
     parentEl.appendChild(commentsContainer)
 
-    const gitment = new Gitment({
+    const gitalk = new Gitalk({
       // ！！！ID最好不要使用默认值（location.href），因为href会携带hash，可能导致一个页面对应多个评论issue！！！
-      // https://github.com/imsun/gitment/issues/55
-      id: path,
+      id: location.origin + path,
       owner: 'ruidoc', // 必须是你自己的github账号
       repo: 'blog', // 上一个准备的github仓库
-      link: location.origin + path,
-      oauth: {
-        client_id: '335aa091f2446d1a5cb4', // 第一步注册 OAuth application 后获取到的 Client ID
-        client_secret: '6f397b78a7f76cc6dfb727b73e860a2553423ae3' // 第一步注册 OAuth application 后获取到的 Clien Secret
-      }
+      distractionFreeMode: false,
+      clientID: '335aa091f2446d1a5cb4', // 第一步注册 OAuth application 后获取到的 Client ID
+      clientSecret: '6f397b78a7f76cc6dfb727b73e860a2553423ae3' // 第一步注册 OAuth application 后获取到的 Clien Secret
     })
-    gitment.render('comments-container')
+    gitalk.render('comments-container')
   }
 }
 
@@ -77,7 +74,7 @@ export default ({
 }) => {
   try {
     // 生成静态页时在node中执行，没有document对象
-    document && integrateGitment(router)
+    document && integrateGitalk(router)
   } catch (e) {
     console.error(e.message)
   }
