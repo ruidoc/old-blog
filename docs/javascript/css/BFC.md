@@ -62,7 +62,7 @@ overflow: hidden;
 
 效果如下：
 
-![F670C641-C752-4F66-9AE0-0D1A58F24A2D](../image/F670C641-C752-4F66-9AE0-0D1A58F24A2D.png)
+![F670C641-C752](../image/F670C641-C752-4F66-9AE0-0D1A58F24A2D.png)
 
 其实这里出现了两个问题：
 
@@ -123,7 +123,7 @@ overflow: hidden;
 
 效果是这样的：
 
-![F0DFF31B-CD58-4882-907C-50F009C10520](../image/F0DFF31B-CD58-4882-907C-50F009C10520.png)
+![F0DFF31B-CD58](../image/F0DFF31B-CD58-4882-907C-50F009C10520.png)
 
 左侧盒子使用了浮动布局，会脱离文档流，“浮”在普通文档流的上方。
 
@@ -139,6 +139,6 @@ overflow: hidden;
 
 最终效果：
 
-![9C81530A-2542-4DD0-939D-392E13F7ADB6](../image/9C81530A-2542-4DD0-939D-392E13F7ADB6.png)
+![9C81530A-2542](../image/9C81530A-2542-4DD0-939D-392E13F7ADB6.png)
 
 查看源码：[两列浮动布局](https://codesandbox.io/s/liangliefudongbuju-1uxrc?file=/index.html)

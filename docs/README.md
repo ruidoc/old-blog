@@ -10,40 +10,40 @@
 
 ### 核心知识
 
-- [数据类型](core/数据类型基础.md)
-- [闭包与应用](core/闭包与应用.md)
-- [变量与作用域](core/变量与作用域.md)
-- [内存管理机制](core/内存管理机制.md)
-- [事件循环](core/事件循环.md)
-- [面向对象](core/面向对象.md)
-- [this指向](core/this指向.md)
-- [执行上下文](core/执行上下文.md)
+- [数据类型](javascript/core/data-types.md)
+- [闭包与应用](javascript/core/closure-apply.md)
+- [变量与作用域](javascript/core/variable-scope.md)
+- [内存管理机制](javascript/core/memory-manage.md)
+- [事件循环](javascript/core/event-loop.md)
+- [面向对象](javascript/core/object-oriented.md)
+- [this指向](javascript/core/this-point.md)
+- [执行上下文](javascript/core/execure-context.md)
 
 ### DOM
 
-- [DOM基础](core/dom/DOM基础.md)
-- [DOM事件体系](core/dom/DOM事件体系.md)
-- [防抖与节流](core/dom/防抖与节流.md)
+- [DOM基础](javascript/dom/dom-basic.md)
+- [DOM事件体系](javascript/dom/dom-event.md)
+- [防抖与节流](javascript/dom/debounce-throttle.md)
 
 ### ES6
 
-- [常用操作](core/es6+/常用操作.md)
-- [Object方法集](core/es6+/Object方法集.md)
-- [暂时性死区](core/es6+/暂时性死区.md)
-- [异步-异步与回调](core/es6+/async/异步与回调.md)
-- [异步-现代异步方案](core/es6+/async/异步的现代方案.md)
-- [异步-Promise原理](core/es6+/async/Promise原理.md)
-- [异步-手写Promise](core/es6+/async/手写Promise.md)
+- [常用操作](javascript/es6+/common-operation.md)
+- [Object方法集](javascript/es6+/object-sets.md)
+- [暂时性死区](javascript/es6+/temporal-dead-zone.md)
+- [异步-异步与回调](javascript/async/async-callback.md)
+- [异步-现代异步方案](javascript/async/modern-scheme.md)
+- [异步-Promise原理](javascript/async/promise-principle.md)
+- [异步-手写Promise](javascript/async/write-promise.md)
 
 ### CSS
 
-- [居中方案](core/css/居中方案.md)
-- [文字处理](core/css/文字处理.md)
-- [响应式布局](core/css/响应式布局.md)
-- [BFC](core/css/BFC.md)
-- [工程化](core/css/工程化.md)
-- [移动端](core/css/移动端.md)
-- [Flex布局](core/css/Flex布局.md)
+- [居中方案](javascript/css/center-scheme.md)
+- [文字处理](javascript/css/text-process.md)
+- [响应式布局](javascript/css/responsive.md)
+- [BFC](javascript/css/BFC.md)
+- [工程化](javascript/css/engineering.md)
+- [移动端](javascript/css/mobile.md)
+- [Flex布局](javascript/css/flex-layout.md)
 
 ## 有用的博客
 

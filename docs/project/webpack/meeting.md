@@ -20,7 +20,7 @@ webpack 可以将任何类型文件打包成 css, js 和图片，供浏览器解
 
 写这篇笔记时，webpack5 已经发布，所以后面代码中用到的包版本都是基于最新的 webpack5。
 
-webpack4 升级到 webpack5 的指南在 [这里](./webpack5升级.md)
+webpack4 升级到 webpack5 的指南在 [这里](./webpack5.md)
 
 ### 核心概念
 

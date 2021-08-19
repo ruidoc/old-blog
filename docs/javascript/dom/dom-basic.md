@@ -56,7 +56,7 @@ DOM 结构以树的形态存在，树中的最小单位是节点
 在这个基础 DEMO 里，整个 HTML 文件可以被看做是一个 Document，根节点就是 html。
 
 我们用树状图表示一下：
-![7EB21103-BA37-4384-944A-3988B333EADD](../image/7EB21103-BA37-4384-944A-3988B333EADD.png)
+![7EB21103-BA37](../image/7EB21103-BA37-4384-944A-3988B333EADD.png)
 
 ### DOM 节点间关系
 
@@ -65,7 +65,7 @@ DOM 结构以树的形态存在，树中的最小单位是节点
 - 父子节点：表示节点间的嵌套关系
 - 兄弟节点：表示节点层级的平行关系
 
-![2F1B4CCB-51C9-4AC0-AD1E-FFE50D47CFA4](../image/2F1B4CCB-51C9-4AC0-AD1E-FFE50D47CFA4.png)
+![2F1B4CCB-51C9](../image/2F1B4CCB-51C9-4AC0-AD1E-FFE50D47CFA4.png)
 
 ### 常考操作
 

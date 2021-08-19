@@ -62,7 +62,7 @@ httpPromise(url1)
 
 清新脱俗有木有！
 
-明白了原理，试试手动实现一个Promise：[模拟Promise](./03_实现一个Promise.md)
+明白了原理，试试手动实现一个Promise：[模拟Promise](./write-promise.md)
 
 ### Generator
 
