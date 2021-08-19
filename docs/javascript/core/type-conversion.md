@@ -97,11 +97,11 @@ JSON.stringify({}) === '{}'
 Object.prototype.toString.call({})=='[object Object]' && Object.keys({}).length === 0
 ```
 
-### 隐式转换
+### 隐式转换（Implicit conversion）
 
 来一张经典图片
 
-![xgE7zB8](./image/xgE7zB8.png)
+![xgE7zB8](../image/xgE7zB8.png)
 #### 二元算术运算
 
 加法两边自动转换字符串：num + ''

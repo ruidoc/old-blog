@@ -82,7 +82,7 @@ setTimeout(function () {
 
 `call`，`apply`，`bind`
 
-![image](./image/6B0F7904-0164-4982-8701-57E6520039B8.png)
+![image](../image/6B0F7904-0164-4982-8701-57E6520039B8.png)
 
 举例：
 

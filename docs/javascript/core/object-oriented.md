@@ -78,7 +78,7 @@ const dog = new Dog('旺财', 3)
 
 关系图如下：
 
-![0cb0a99061f9d74a30819fa1631ff0ff.png](./image/A43BCA29-3799-41D6-A2EC-6B69A3DDC4F9.png)
+![0cb0a99061f9d74a30819fa1631ff0ff.png](../image/A43BCA29-3799-41D6-A2EC-6B69A3DDC4F9.png)
 
 模拟一个 new 的实现：
 
@@ -116,7 +116,7 @@ dog.toString()
  
 当访问一个 Js 实例的属性/方法时，它首先搜索这个实例本身；如果找不到，它会转而搜索实例的原型对象；如果还找不到，它就去搜索原型对象的原型对象，一直往上找，这个搜索的轨迹，就叫做原型链。
 
-![99299eecf56a87d6bd679036a3431da8.png](./image/FEBB1465-6D89-48E4-8E66-4813C09335FC.png)
+![99299eecf56a87d6bd679036a3431da8.png](../image/FEBB1465-6D89-48E4-8E66-4813C09335FC.png)
 
 图中彼此相连的 prototype，就构成了所谓的 “原型链”
 

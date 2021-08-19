@@ -13,7 +13,7 @@ module.exports = {
     nav: [
       {
         text: 'JS核心',
-        link: '/core/'
+        link: '/javascript/'
       },
       {
         text: '计算机基础',
@@ -59,84 +59,84 @@ module.exports = {
           title: '基础指南',
           collapsable: false,
           children: [
-            '01-clone',
-            '02-记录文件更新',
-            '03-logs',
-            '04-撤消操作',
-            '05-remote',
-            '06-tag',
-            '07-alias',
-            '08-分支简介',
-            '09-新建与合并分支'
+            'core/clone',
+            'core/amend',
+            'core/logs',
+            'core/reset',
+            'core/remote',
+            'core/tags',
+            'core/alias',
+            'core/branch-intro',
+            'core/branch-merge'
           ]
         },
         {
           title: '应用指南',
           collapsable: false,
-          children: ['其他杂项']
+          children: ['practice/sundry']
         }
       ],
-      '/core/': [
+      '/javascript/': [
         {
-          title: '基础',
+          title: '核心',
           collapsable: false,
           children: [
-            '数据类型基础',
-            '闭包与应用',
-            '变量与作用域',
-            '内存管理机制',
-            '事件循环',
-            '面向对象',
-            'this指向',
-            '执行上下文'
+            'core/data-types',
+            'core/closure-apply',
+            'core/variable-scope',
+            'core/memory-manage',
+            'core/event-loop',
+            'core/object-oriented',
+            'core/this-point',
+            'core/execure-context'
           ]
         },
         {
           title: '扩展',
           collapsable: false,
           children: [
-            '数据类型转换',
-            '闭包面试真题',
-            '词法作用域',
-            '原型真题解析'
+            'core/type-conversion',
+            'core/closure-paper',
+            'core/lexical-scope',
+            'core/proto-paper'
           ]
         },
         {
           title: 'ES6',
           collapsable: false,
           children: [
-            'es6+/常用操作',
-            'es6+/暂时性死区',
-            'es6+/Object方法集',
-            {
-              title: '异步专题',
-              collapsable: false,
-              children: [
-                'es6+/async/异步与回调',
-                'es6+/async/现代方案',
-                'es6+/async/Promise原理',
-                'es6+/async/手写Promise'
-              ]
-            }
+            'es6+/common-operation',
+            'es6+/temporal-dead-zone',
+            'es6+/object-sets'
+          ]
+        },
+        {
+          title: '异步',
+          collapsable: false,
+          children: [
+            'async/async-callback',
+            'async/modern-scheme',
+            'async/promise-principle',
+            'async/write-promise'
           ]
         },
         {
           title: 'DOM',
           collapsable: false,
-          children: ['dom/DOM基础', 'dom/DOM事件体系', 'dom/防抖与节流']
+          children: ['dom/dom-basic', 'dom/dom-event', 'dom/debounce-throttle']
         },
         {
           title: 'CSS',
           collapsable: false,
           children: [
-            'css/居中方案',
-            'css/文字处理',
-            'css/响应式布局',
-            'css/三栏布局',
+            'css/center-scheme',
+            'css/text-process',
+            'css/responsive',
+            'css/three-column',
             'css/BFC',
-            'css/工程化',
-            'css/移动端',
-            'css/Flex布局'
+            'css/engineering',
+            'css/mobile',
+            'css/flex-layout'
           ]
         }
       ],
@@ -145,32 +145,32 @@ module.exports = {
           title: '浏览器基础',
           collapsable: false,
           children: [
-            'browser/浏览器组成',
-            'browser/渲染引擎原理',
-            'browser/重绘与重排',
-            'browser/缓存机制',
-            'browser/SEO优化'
+            'browser/brower-ingredient',
+            'browser/render-engine',
+            'browser/reflow-repaint',
+            'browser/cache-rule',
+            'browser/seo-optimize'
           ]
         },
         {
           title: '计算机组成原理',
           collapsable: false,
           children: [
-            'compose/发展史',
-            'compose/冯诺依曼',
-            'compose/翻译与解析',
-            'compose/计算单位'
+            'compose/developing',
+            'compose/von-neumann',
+            'compose/translate-interprete',
+            'compose/calculate-unit'
           ]
         },
         {
           title: '计算机网络',
           collapsable: false,
           children: [
-            'network/TCP与UDP',
-            'network/HTTP与HTTP2',
-            'network/HTTPS',
-            'network/跨域方案',
-            'network/axios全解'
+            'network/tcp-udp',
+            'network/http',
+            'network/https',
+            'network/cross-origin',
+            'network/axios'
           ]
         }
       ],
@@ -178,17 +178,12 @@ module.exports = {
         {
           title: 'React',
           collapsable: false,
-          children: ['react/生命周期']
+          children: ['react/life-cycle', 'react/router', 'react/mobx']
         },
         {
           title: 'Vue',
           collapsable: false,
-          children: [
-            'vue/零散知识',
-            'vue/响应式原理',
-            'vue/nextTick原理',
-            'vue/vuex原理'
-          ]
+          children: ['vue/others', 'vue/responsive', 'vue/nextTick', 'vue/vuex']
         }
       ],
       '/project/': [
@@ -196,29 +191,29 @@ module.exports = {
           title: 'webpack',
           collapsable: false,
           children: [
-            'webpack/初识webpack',
-            'webpack/编写loader',
-            'webpack/编写plugin',
-            'webpack/webpack5升级'
+            'webpack/meeting',
+            'webpack/dev-loader',
+            'webpack/dev-plugin',
+            'webpack/webpack5'
           ]
         },
         {
           title: 'babel',
           collapsable: false,
-          children: ['babel/babel基础']
+          children: ['babel/concept']
         },
         {
           title: 'npm',
           collapsable: false,
-          children: ['npm/package解析', 'npm/开发脚手架', 'npm/发布npm包']
+          children: ['npm/package-json', 'npm/dev-scaffold', 'npm/npm-publish']
         },
         {
           title: 'format',
           collapsable: false,
           children: [
-            'standard/vscode格式化',
-            'standard/eslint入门',
-            'standard/eslint规则'
+            'standard/vscode-format',
+            'standard/eslint-start',
+            'standard/eslint-rules'
           ]
         }
         // {
@@ -234,7 +229,13 @@ module.exports = {
         {
           title: 'TypeScript 基础',
           collapsable: false,
-          children: ['类型基础', '类型高级', '装饰器', '声明文件', 'tsc']
+          children: [
+            'type-basic',
+            'type-super',
+            'decorator',
+            'declarative-file',
+            'tsc'
+          ]
         }
       ],
       '/server/': [
@@ -242,22 +243,22 @@ module.exports = {
           title: 'shell',
           collapsable: false,
           children: [
-            'shell/前端之shell',
-            'shell/shell基础',
-            'shell/权限设置',
-            'shell/ssh免密登录'
+            'shell/frontend-shell',
+            'shell/introduction',
+            'shell/permission',
+            'shell/ssh-nopass'
           ]
         },
         {
           title: 'nodejs',
           collapsable: false,
           children: [
-            'node/初识node',
-            'node/命令行',
-            'node/node脚本',
-            'node/事件循环',
-            'node/事件触发器',
-            'node/http服务器'
+            'node/starting',
+            'node/command-line',
+            'node/scripts',
+            'node/event-loop',
+            'node/event-emitter',
+            'node/http-server'
           ]
         },
         {
@@ -270,20 +271,16 @@ module.exports = {
             'docker/registry',
             'docker/verdaccio',
             'docker/compose',
-            'docker/问题记录'
+            'docker/issues'
           ]
         },
         {
           title: 'nginx',
           collapsable: false,
-          children: [
-            'nginx/location配置',
-            'nginx/history路由',
-            'nginx/docker相关'
-          ]
+          children: ['nginx/location', 'nginx/history', 'nginx/docker']
         }
       ],
-      '/interview/': ['基础100.md', '框架50.md']
+      '/interview/': ['basic-100.md', 'framwork-50.md']
     }
   }
 }

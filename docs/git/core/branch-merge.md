@@ -1,4 +1,4 @@
-# 09 新建与合并分支
+# 分支新建与合并
 
 Git 初始化之后，默认只有一个 master 分支，那么什么时候会创建新分呢？
 
@@ -35,7 +35,7 @@ $ git commit -a -m 'iss53 solution'
 ```
 此时分支是这样的：
 
-![basic-branching-3](./image/basic-branching-3.png)
+![basic-branching-3](../image/basic-branching-3.png)
 
 提交之后，我们再切换回 master 分支。
 
@@ -59,6 +59,6 @@ Fast-forward
 
 在上一步的基础上，分别再对 master 分支和 iss53 分支进行修改，修改后的分支如下：
 
-![basic-branching-6](./image/basic-branching-6.png)
+![basic-branching-6](../image/basic-branching-6.png)
 
 注意：C2 后的分支开始出现了分叉。
