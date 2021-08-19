@@ -55,7 +55,7 @@ function integrateGitalk(router) {
 
     const gitalk = new Gitalk({
       // ！！！ID最好不要使用默认值（location.href），因为href会携带hash，可能导致一个页面对应多个评论issue！！！
-      id: location.origin + path,
+      id: path.slice(1, -5),
       owner: 'ruidoc', // 必须是你自己的github账号
       repo: 'blog', // 上一个准备的github仓库
       admin: ['ruidoc'],
@@ -79,6 +79,6 @@ export default ({
       integrateGitalk(router)
     }
   } catch (e) {
-    console.error(e.message)
+    console.log(e.message)
   }
 }
