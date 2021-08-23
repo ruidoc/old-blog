@@ -10,6 +10,8 @@
 error parsing HTTP 413 response body: invalid character '<' looking for beginning of value: "<html>\r\n<head><title>413 Request Entity Too Large</title></head>\r\n<body>
 ```
 
+这是一段 html 响应报错，关键信息是 _413 Request Entity Too Large_，意思是上传资源太大。
+
 这是因为你代理 registry 端口的 nginx 限制了上传大小。解决方案也简单，改下 nginx 配置：
 
 修改 `/etc/nginx/nginx.conf` 文件，在 `http` 配置下增加一行：

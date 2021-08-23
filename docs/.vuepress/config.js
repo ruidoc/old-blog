@@ -284,3 +284,8 @@ module.exports = {
     }
   }
 }
+
+module.exports.comment = {
+  resolve: [''],
+  ignore: ['/devops']
+}

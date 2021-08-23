@@ -1,3 +1,5 @@
+const isenv = process.env.NODE_ENV == 'development'
+const { comment } = require('./config')
 // 重试
 function tryRun(fn, times = 3) {
   let execCount = 1
@@ -75,8 +77,12 @@ export default ({
 }) => {
   try {
     // 生成静态页时在node中执行，没有document对象
-    if (document) {
-      integrateGitalk(router)
+    let path = router.history._startLocation
+    // debugger
+    if (document && !isenv) {
+      if (!comment.ignore.some(str => path.includes(str))) {
+        integrateGitalk(router)
+      }
     }
   } catch (e) {
     console.log(e.message)

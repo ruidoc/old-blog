@@ -2,6 +2,8 @@
 
 Gitalk 是一个评论组件，数据存储在 GitHub Issue 上，非常适合个人博客集成评论系统。
 
+本博客的评论系统就是基于 Gitalk，效果看底部。
+
 ### 安装
 
 可以直接引入 css 和 js：
@@ -42,15 +44,20 @@ OAuth Application 会提供一个 `clientId` 和 `clientSecret`，有了它，�
 const gitalk = new Gitalk({
   clientID: '', // 上一步 OAuth Application 可以拿到
   clientSecret: '', // 上一步 OAuth Application 可以拿到
-  repo: '', // github 仓库名，不需要加用户名，如：gitalk
-  owner: '', // github 用户名，我的是 ruidoc
-  admin: [''], // 可以修改删除评论的 GitHub 用户名，数组
-  id: location.pathname, // 页面标识，直接用理由path即可
-  distractionFreeMode: false // 没用
+  repo: 'blog', // github 仓库名，不需要加用户名，如：blog
+  owner: 'ruidoc', // github 用户名，我的是 ruidoc
+  admin: ['ruidoc'], // 可以修改删除评论的 GitHub 用户名，数组
+  id: location.pathname // 页面标识，直接用页面path即可
 })
 
 gitalk.render('gitalk-container')
 ```
+
+上面的配置都是必填项，少填会报错的！全部配置看 [这里](https://github.com/gitalk/gitalk#options)
+
+配置里的 `id` 字段要着重说一下。Gitalk 会为每一个不同的 id 初始化一条 issue，实现的效果就是每个页面对应一个 issue。因此要确定相同页面的 id 是一样的，也就是说不能把 url 参数加到 id 里。同时，每个 id 还对应一个评论的 tag，因此简短也是必要的。
+
+`id` 还有一个注意事项是，不要包含特殊字符，如 `http://` 这样把全 url 加进去，Gitalk 会报解析错误。当然，也不建议包含中文。
 
 除了上面这种 render 的方式，在 React 中，也支持直接使用组件：
 
@@ -66,3 +73,5 @@ return (
   />
 )
 ```
+
+赶快动手试试吧！
