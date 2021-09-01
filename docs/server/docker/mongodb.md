@@ -50,6 +50,8 @@ db.createUser({
 })
 ```
 
+接下来就可以用这个账户连接数据库了。
+
 ### stack 运行
 
 新建 `stack.yml`：
