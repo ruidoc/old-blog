@@ -52,6 +52,8 @@ collection.aggregate([
 }
 ```
 
+该字段只能返回集合中存在的字段。如果要新增字段，请用 \$addFields
+
 **\$addFields**
 
 向查询返回的文档添加字段。
@@ -115,3 +117,5 @@ collection.aggregate([
   }
 }
 ```
+
+展开的数组会各自拆分为一条记录。
