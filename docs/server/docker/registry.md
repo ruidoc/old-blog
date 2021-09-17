@@ -124,7 +124,7 @@ docker-registry-ui 提供一个 docker 镜像，与 registry 关联在一起。
 我们写一个 `registry.yml`，作为 docker-compose 的配置：
 
 ```yml
-version: "2.0"
+version: '2.0'
 services:
   registry:
     image: registry:2
@@ -167,3 +167,26 @@ $ docker-compose -f registry.yml -d
 
 > 注意：如过你的服务器是 swarm 集群，使用 docker-compose 只会在当前节点创建容器，而不会扩展到其他节点。推荐方案是 `docker stack deploy`
 
+### 允许删除
+
+默认 registry 的镜像是不允许删除的，registry-ui 也没有提供删除的按钮。
+
+Registry 的配置是一个 YAML 文件，它提供了非常多的默认配置（文档参考[这里](https://docs.docker.com/registry/configuration/)），是否允许删除就是一个配置，默认如下：
+
+```yml
+storage:
+  delete:
+    enabled: false
+```
+
+因为我们是用 compose 运行的，没有 registry 配置文件，只有 compose.yml 文件，所以允许删除的配置要在 compose.yml 里定义。
+
+registry 提供了一个配置规则，可以将配置字段大写并且用`_`连接起来，组成一个环境变量，使配置生效。
+
+所以上面的配置转换成环境变量是：
+
+```sh
+REGISTRY_STORAGE_DELETE_ENABLED=true
+```
+
+将该环境变量写入 compose.yml，即完成了配置。

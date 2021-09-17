@@ -10,7 +10,7 @@ docker-compose 通过一个单独的 `docker-compose.yml` 配置文件进行多�
 
 docker-compose 是一个单独的包，目前主包是 `1.x` 的版本，提供了 `docker-compose` 命令。
 
-最新的 Docker 官方用 GO 语言 重写 了 Docker Compose，将其作为了 docker cli 的子命令，称为 `Compose V2`，用 `docker compose` 命令替换了 `docker-compose`。
+最新的 Docker 官方用 GO 语言重写 了 Docker Compose，将其作为了 docker cli 的子命令，称为 `Compose V2`，用 `docker compose` 命令替换了 `docker-compose`。
 
 不过目前 Compose V2 还是 beta 版本，项目中使用还用 v1 比较好。
 
@@ -69,7 +69,6 @@ $ docker-compose rm
 ```
 
 如果没有上述说的配置文件，也可以指定其他的 `.yml` 配置文件，如：
-
 
 ```sh
 $ docker-compose -f mycustom.yml up -d
