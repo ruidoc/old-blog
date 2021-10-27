@@ -19,7 +19,7 @@ $ node
 >
 ```
 
-REPL 是交互式解析器。在该模式下，`>` 后面是等待用户输入的内容。
+REPL（Read Eval Print Loop）是交互式解析器。在该模式下，`>` 后面是等待用户输入的内容。
 
 输入一行打印代码，回车执行：
 
@@ -69,35 +69,35 @@ node app.js -v
 从版本 7 开始，node 提供了 readline 模块来执行交互：
 
 ```js
-const readline = require("readline");
+const readline = require('readline')
 
 const line = createInterface({
   input: process.stdin,
-  output: process.stdout,
-});
+  output: process.stdout
+})
 
-line.question(`你叫什么名字?`, (name) => {
-  console.log(`你好 ${name}!`);
-  line.close();
-});
+line.question(`你叫什么名字?`, name => {
+  console.log(`你好 ${name}!`)
+  line.close()
+})
 ```
 
 这个模块是基础实现。更强大的方式是使用 `inquirer` 库，它提供了更完整、更抽象的解决方案。
 
 ```js
-const inquirer = require("inquirer");
+const inquirer = require('inquirer')
 
 var questions = [
   {
-    type: "input",
-    name: "name",
-    message: "你叫什么名字?",
-  },
-];
+    type: 'input',
+    name: 'name',
+    message: '你叫什么名字?'
+  }
+]
 
-inquirer.prompt(questions).then((answers) => {
-  console.log(`你好 ${answers["name"]}!`);
-});
+inquirer.prompt(questions).then(answers => {
+  console.log(`你好 ${answers['name']}!`)
+})
 ```
 
 inquirer 可以执行许多操作，例如询问多项选择、展示单选按钮、确认等。
@@ -139,9 +139,9 @@ console.clear() 会清除当前控制台
 console.count() 方法，记录某个变量打印了多少次。
 
 ```js
-const name = "ruims";
-console.count(name); // ruims: 1
-console.count(name); // ruims: 2
+const name = 'ruims'
+console.count(name) // ruims: 1
+console.count(name) // ruims: 2
 ```
 
 **打印堆栈踪迹**
@@ -151,10 +151,10 @@ console.count(name); // ruims: 2
 使用 console.trace() 实现：
 
 ```js
-const fun2 = () => console.trace();
-const fun1 = () => fun2();
+const fun2 = () => console.trace()
+const fun1 = () => fun2()
 
-fun1();
+fun1()
 ```
 
 则会打印以下内容：
@@ -206,13 +206,13 @@ console.log(chalk.yellow('你好'))
 可以使用 progress 库创建进度条：
 
 ```js
-const ProgressBar = require("progress");
-const bar = new ProgressBar(":bar", { total: 10 });
+const ProgressBar = require('progress')
+const bar = new ProgressBar(':bar', { total: 10 })
 
 const timer = setInterval(() => {
-  bar.tick();
+  bar.tick()
   if (bar.complete) {
-    clearInterval(timer);
+    clearInterval(timer)
   }
-}, 100);
+}, 100)
 ```
