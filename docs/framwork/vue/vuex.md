@@ -1,4 +1,4 @@
-# vuex 原理
+# Vuex 原理
 
 简述下 Vuex 的实现原理
 
@@ -13,14 +13,10 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+  state: {},
+  mutations: {},
+  actions: {},
+  modules: {}
 })
 ```
 
@@ -90,4 +86,3 @@ new Vue({
   store
 })
 ```
-

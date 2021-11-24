@@ -60,6 +60,7 @@ module.exports = {
           collapsable: false,
           children: [
             'core/clone',
+            'core/track-file',
             'core/amend',
             'core/logs',
             'core/reset',
