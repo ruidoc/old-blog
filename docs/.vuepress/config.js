@@ -259,7 +259,8 @@ module.exports = {
             'node/scripts',
             'node/event-loop',
             'node/event-emitter',
-            'node/http-server'
+            'node/http-server',
+            'node/websocket'
           ]
         },
         {
