@@ -4,7 +4,7 @@
 
 事实上错误有很多分类，了解这些分类和来源，能够帮助我们更快更准确的定位问题。
 
-### 认识错误
+## 认识错误
 
 在 js 中，一切皆对象，错误也是一个对象，叫做 `Error` 对象。
 
@@ -48,9 +48,13 @@ MyError.prototype = Object.create(Error.prototype)
 MyError.prototype.constructor = MyError
 ```
 
-### 错误捕获
+## 错误捕获
 
-js 中的错误统一用 `try catch` 捕获。
+错误捕获分两种，`全局捕获` 和 `页面捕获`。
+
+### 页面错误捕获
+
+js 中的错误页面中用 `try catch` 捕获。
 
 ```js
 try {
@@ -132,3 +136,14 @@ try {
   }
 }
 ```
+
+### 全局错误捕获
+
+全局错误捕获主要是监听 window 上的事件，主要有以下方法：
+
+- window.onerror
+- window.addEventListener('error')
+- window.addEventListener('unhandledrejection')
+
+**window.onerror** 是一个事件处理器，如果定义了这个事件处理器，那么在运行时 JS 发生错误就会执行函数。
+**window.addEventListener('error')** 是一个事件监听器，
